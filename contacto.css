@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+body {
+    background: url(https://www.xtrafondos.com/wallpapers/montanas-con-nieve-en-el-bosque-3934.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-color: #f4f4f9;  
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.capa {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #c7c7c7;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+/* Estilos para el encabezado */
+.header{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    background-color: #035718;
+    top: 0;left: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container .btn-menu, .logo {
+    float: left;
+    line-height: 100px;
+}
+
+.container .btn-menu label {
+    color: #000000;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.logo {
+  padding: 0px;
+  margin-bottom: 1px;
+}
+.logo h1 {
+    color: #000000;
+    align-items: center;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.container .menu {
+    float: right;
+    line-height: 100px;
+}
+
+.container .menu a {
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.container .menu a:hover {
+    border-bottom: 2px solid #063a11;
+    padding-bottom: 5px;
+}
+
+/* Fin de estilos para el encabezado */
+
+/* Menú lateral */
+#btn-menu {
+    display: none;
+}
+
+.container-menu {
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-menu:checked ~ .container-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu {
+    width: 100%;
+    max-width: 250px;
+    background: #063a11;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu {
+    transform: translateX(0%);
+}
+
+.cont-menu nav {
+    transform: translateY(15%);
+}
+
+.cont-menu nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+.cont-menu label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Fin de Menú lateral */
+
+.form {
+  background-color:#a2dafd;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 1rem;
+  padding: 3.5rem 1.5em;
+}
+.form_container {
+  width: 100%;
+  display: grid;
+  gap: 1em;
+  grid-auto-columns: 100%;
+}
+.form_title {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 0.4em;
+}
+.form_input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.8em 1em;
+  outline: none;
+  border: none;
+  border: 1px solid #000000;
+  border-radius: 0.2em;
+}
+.form_input_message {
+  resize: none;
+  padding: 1.8em 1em;
+  margin-bottom: 0.5em;
+}
+.form_cta {
+  font-family: inherit;
+  background-color: #089fe0;
+  color: #ffffff;
+  border: none;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0.7em 0;
+  border-radius: 0.2em;
+  cursor: pointer;
+  font-weight: 400;
+}
+@media (max-width 450px;){
+  .form {
+    padding: 3.5em 1em;
+  }
+}  
+footer {
+  background-color: #282a2b;
+  color: #ffffff;
+  text-align:center;
+  padding: 20px 0;
+  position:absolute;
+  bottom:0;
+  width: 50%;
+}
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 25px;
+  border-radius: 50%;
+  transition: all 0.8s;
+}
+.icon:hover {
+  background-color: #e60073;
+  box-shadow: 0 0 20px #e60073;
+}
+.icon:hover:nth-child(2) {
+  background-color: #2196f3;
+  box-shadow: 0 0 20px #2196f3;
+}
+.icon:hover:nth-child(3) {
+  background-color: #25d366;
+  box-shadow: 0 0 20px #25d366;
+}
+.icon:hover:nth-child(4) {
+  background-color: #1da1f2;
+  box-shadow: 0 0 20px #1da1f2;
+}
+.icon i {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.7rem;
+}
+svg circle {
+  stroke-dasharray: 150;
+  transition: all 0.8s ease-in-out;
+}
+.icon:hover circle {
+  stroke-dasharray: 220;
+}
+
+  .social-icons{
+  text-align:center;
+  padding:0;
+  }
+  
+  .social-icons li{
+  display: inline-block;
+  text-align:center;
+  padding:5px;
+  }
+  
+  .social-icons i{
+  color:#ffff;
+  font-size:25px;
+  }
+  
+  a{
+  text-decoration:none;
+  }
+  
+  a:hover{
+  color: #f18930;
+  }
+  
+  .social-icons i:hover{
+  color:#53b0fc;
+  }
+  
+  
